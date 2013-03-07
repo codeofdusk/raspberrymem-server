@@ -1,7 +1,4 @@
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
-
+from distutils.core import setup
 config = {
     'description': 'The server side of a free memory aid for seniors, powered by Raspberry Pi)',
     'author': 'Bill Dengler',

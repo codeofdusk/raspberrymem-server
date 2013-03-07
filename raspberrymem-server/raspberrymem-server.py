@@ -8,6 +8,14 @@ import pickle
 #variable declarations
 devices=[]
 
+#function declarations
+def find_device(id2find):
+    for d2i in (devices):
+        if (d2i.id == id2find ):
+            return d2i
+    #OK, we're here, so that means we didn't return from the for loop. Return 0 since no devices matched our search.
+    return 0
+
 #class declarations
 class device(object):
     def __init__(self, id, reminders, notes, welfare_checking):
