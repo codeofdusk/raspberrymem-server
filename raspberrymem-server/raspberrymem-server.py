@@ -32,7 +32,8 @@ if (len(argv) < 2 ):
 print("initializing socket...")
 soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print("binding...")
-soc.bind((socket.gethostname(), int(argv[1])))
+soc.bind(("0.0.0.0", int(argv[1])))
+
 print("listening...")
 soc.listen(5)
 print("ready for incoming connections")
@@ -53,4 +54,10 @@ while (1) :
         idstr=str(id)
         con.send(bytes(idstr,"utf-8"))
         con.close()
+    if (cmd == b"get" ):
+        id2get = con.recv(6)
+        matchingdevice=find_device(id2get)
+        if (matchingdevice == 1 ):
+            con.send(b"Error : device not found.")
+            con.close()
 
