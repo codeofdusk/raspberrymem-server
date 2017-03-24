@@ -1,2 +1,2 @@
 # Raspberrymem-server
-See the Raspberrymem (client) repo [here] (http://github.com/codeofdusk/raspberrymem)
+Beginnings of a rewrite of the Raspberrymem server to Python. See [the client repo](http://github.com/codeofdusk/raspberrymem) for more details.
